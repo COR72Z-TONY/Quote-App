@@ -1,0 +1,75 @@
+{
+  "info": {
+    "success": true,
+    "data": {
+      "info": "Some information about the company."
+    }
+  },
+  "users": [
+    {
+      "id": 1,
+      "email": "aleksei@example.com",
+      "password": "lkJlkn8hj",
+      "token": "fake-jwt-token",
+      "fullname": "Kama Pulya"
+    }
+  ],
+  "authors": [
+    {
+      "authorId": 1,
+      "name": "Walt Disney"
+    },
+    {
+      "authorId": 2,
+      "name": "Mark Twain"
+    },
+    {
+      "authorId": 3,
+      "name": "Albert Einstein"
+    },
+    {
+      "authorId": 4,
+      "name": "Nikola Tesla"
+    },
+    {
+      "authorId": 5,
+      "name": "Isaac Newton"
+    },
+    {
+      "authorId": 6,
+      "name": "Kama Pulya"
+    }
+  ],
+  "quotes": [
+    {
+      "quoteId": 1,
+      "authorId": 1,
+      "quote": "The way to get started is to quit talking and begin doing."
+    },
+    {
+      "quoteId": 2,
+      "authorId": 2,
+      "quote": "The only way to do great work is to love what you do."
+    },
+    {
+      "quoteId": 3,
+      "authorId": 3,
+      "quote": "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution."
+    },
+    {
+      "quoteId": 4,
+      "authorId": 4,
+      "quote": "The present is theirs; the future, for which I really work, is mine."
+    },
+    {
+      "quoteId": 5,
+      "authorId": 5,
+      "quote": "To be or not to be, that is the question."
+    },
+    {
+      "quoteId": 6,
+      "authorId": 6,
+      "quote": "Не важно с какой скоростью ты двигаешься, братишка, главное не останавливайся ежжи, пока остановка не стала последней ежжи"
+    }
+  ]
+}
