@@ -10,7 +10,7 @@ import {
   logout as apiLogout,
   getProfile as apiGetProfile,
 } from "../services/api";
-import { UserProfile, AuthState } from "../types";
+import { UserProfile, AuthState, Author, Quote } from "../types";
 import Cookies from "js-cookie";
 
 // Create the context
@@ -26,6 +26,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [token, setToken] = useState<string | null>(null);
   const [user, setUser] = useState<UserProfile | null>(null);
+  const [currentAuthor, setCurrentAuthor] = useState<Author | null>(null);
+  const [currentQuote, setCurrentQuote] = useState<Quote | null>(null);
 
   // Check for token on initial load
   useEffect(() => {
@@ -95,6 +97,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
+  const setQuoteData = (author: Author, quote: Quote) => {
+    setCurrentAuthor(author);
+    setCurrentQuote(quote);
+  };
+
   // Context value
   const value: AuthState = {
     isAuthenticated,
@@ -103,6 +110,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     login: handleLogin,
     logout: handleLogout,
     getProfile: handleGetProfile,
+    currentAuthor,
+    currentQuote,
+    setQuoteData,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

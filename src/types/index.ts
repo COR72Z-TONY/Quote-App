@@ -50,4 +50,7 @@ export interface AuthState {
   login: (email: string, password: string) => Promise<boolean>;
   logout: () => Promise<void>;
   getProfile: () => Promise<void>;
+  currentAuthor: Author | null;
+  currentQuote: Quote | null;
+  setQuoteData: (author: Author, quote: Quote) => void;
 }

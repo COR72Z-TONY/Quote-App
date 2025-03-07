@@ -15,12 +15,11 @@ import QuoteModal from "../components/QuoteModal";
 import { Author, Quote } from "../types";
 
 const User: React.FC = () => {
-  const { user, getProfile } = useAuth();
+  const { user, getProfile, currentAuthor, currentQuote, setQuoteData } =
+    useAuth();
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const [currentAuthor, setCurrentAuthor] = useState<Author | null>(null);
-  const [currentQuote, setCurrentQuote] = useState<Quote | null>(null);
 
   useEffect(() => {
     const loadProfile = async () => {
@@ -43,8 +42,7 @@ const User: React.FC = () => {
   };
 
   const handleQuoteComplete = (author: Author, quote: Quote) => {
-    setCurrentAuthor(author);
-    setCurrentQuote(quote);
+    setQuoteData(author, quote);
   };
 
   return (
