@@ -8,8 +8,8 @@
   "users": [
     {
       "id": 1,
-      "email": "kam@pulya.dg",
-      "password": "kamapulya",
+      "email": "aleksei@example.com",
+      "password": "lkJlkn8hj",
       "token": "fake-jwt-token",
       "fullname": "Kama Pulya"
     }
