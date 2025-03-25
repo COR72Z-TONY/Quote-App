@@ -65,27 +65,6 @@ quote-app/
 └── vite.config.ts    # Vite configuration
 ```
 
-## Testing Approach
-
-The application could be tested with the following approaches:
-
-1. **Unit Tests**: Testing individual components and functions.
-
-   - Testing components with React Testing Library
-   - Testing API services with mock axios responses
-
-2. **Integration Tests**: Testing interactions between components.
-
-   - Testing authentication flow
-   - Testing protected routes
-
-3. **E2E Tests**: Testing the entire application flow.
-
-   - Using Cypress to simulate user interactions
-
-4. **API Mock Testing**: Testing the application with mock API responses.
-   - Using tools like MSW (Mock Service Worker)
-
 ## Git Branching Strategy
 
 A simple git branching strategy:
